@@ -1,7 +1,7 @@
 {
   "name": "shack",
-  "version": "0.0.1",
-  "description": "Shack Express enhancement wrapper",
+  "version": "0.0.2",
+  "description": "Express wrapper with routing and controllers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,10 @@
     "routing",
     "routes"
   ],
-  "author": "Reed Lauber",
+  "author": {
+    "name": "Reed Lauber",
+    "email": "reedlauber@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/reedlauber/shack/issues"
