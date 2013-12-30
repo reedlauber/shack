@@ -1,0 +1,33 @@
+{
+  "name": "shack",
+  "version": "0.0.1",
+  "description": "Shack Express enhancement wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/reedlauber/shack.git"
+  },
+  "keywords": [
+    "Server",
+    "controllers",
+    "routing",
+    "routes"
+  ],
+  "author": "Reed Lauber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reedlauber/shack/issues"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "extend": "~1.1.3",
+    "colors": "~0.6.2"
+  },
+  "devDependencies": {
+    "hbs": "~2.3.0",
+    "mocha": "*"
+  }
+}
