@@ -32,7 +32,7 @@ app.listen(3000);
 ```js
 var ctrl = require('shack').controller('users');
 
-// A default "index" action is always created that you can override if you need to populate the view
+// A default "index" action is always created
 
 ctrl.action('create', function(req, res, success) {
 	// Save user
@@ -46,9 +46,9 @@ modules.exports = ctrl;
 
 ## Features
 
-	* Build on [Express](https://github.com/visionmedia/express)
-	* Elegant, dedicated routing file
-	* Controller pattern focused on actions instead of specifically http requests
-	* Sensible defaults for common behaviors
-	* Easily default whole controllers or actions to JSON
-	* "before" and "after" handlers for common pre- or post-action behaviors
+  * Build on [Express](https://github.com/visionmedia/express)
+  * Elegant, dedicated routing file
+  * Controller pattern focused on actions instead of specifically http requests
+  * Sensible defaults for common behaviors
+  * Easily default whole controllers or actions to JSON
+  * "before" and "after" handlers for common pre- or post-action behaviors
