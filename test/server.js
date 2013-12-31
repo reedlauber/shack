@@ -1,8 +1,8 @@
-var shack = require('./index'),
+var shack = require('../index'),
 	app = shack();
 
-app.set('routes', __dirname + '/test/routes');
-app.set('controllers', __dirname + '/test/controllers');
+app.set('routes', './routes');
+app.set('controllers', './controllers');
 
 app.set('view engine', 'hbs');
 

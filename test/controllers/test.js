@@ -1,3 +1,3 @@
-var ctrl = require('../../lib/controller')('test');
+var ctrl = require('../../index').controller('test');
 
 module.exports = ctrl;
