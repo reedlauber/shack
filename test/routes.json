@@ -1,3 +1,4 @@
 {
-	"get /test": { "action":"test" }
+	"get /test": { "action":"test" },
+	"get /test/flash": { "action":"test:flash" }
 }

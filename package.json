@@ -1,6 +1,6 @@
 {
   "name": "shack",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Express wrapper with routing and controllers.",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "hbs": "~2.3.0",
-    "mocha": "*"
+    "mocha": "~1.18.2"
   }
 }
