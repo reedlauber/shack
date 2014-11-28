@@ -1,6 +1,6 @@
 {
   "name": "shack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Express wrapper with routing and controllers.",
   "main": "index.js",
   "scripts": {
