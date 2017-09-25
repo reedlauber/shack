@@ -1,4 +1,4 @@
-var ctrl = require('../../index').controller('test');
+const ctrl = require('../../index').controller('test');
 
 ctrl.action('flash', function(req, res, success) {
 	req.flash('info', 'Here is some info...');

@@ -1,8 +1,9 @@
-var shack = require('../index'),
-	app = shack();
+const path = require('path');
+const shack = require('../index');
+const app = shack();
 
-app.set('routes', './routes');
-app.set('controllers', './controllers');
+app.set('routes', path.resolve(process.cwd(), './routes'));
+app.set('controllers',  path.resolve(process.cwd(), './controllers'));
 
 app.set('view engine', 'hbs');
 

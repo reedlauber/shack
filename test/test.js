@@ -1,25 +1,9 @@
-var assert = require('assert'),
-	config = require('../lib/config'),
-	router = require('../lib/router'),
-	middleware = require('../lib/middleware'),
-	flash = middleware.flash(),
-	noop = function() {};
-
-describe('config.read_routes', function() {
-	var routes = config.read_routes(process.cwd() + '/test/routes', true);
-	
-	it('should read routes file', function() {
-		assert.ok(routes);
-	});
-
-	it('should find correct number of routes', function() {
-		var count = 0;
-		for(var p in routes) {
-			count++;
-		}
-		assert.equal(2, count);
-	});
-});
+const path = require('path');
+const assert = require('assert');
+const router = require('../lib/router');
+const middleware = require('../lib/middleware');
+const flash = middleware.flash();
+const noop = function() {};
 
 describe('router.middleware', function() {
 	var app = {
@@ -28,15 +12,16 @@ describe('router.middleware', function() {
 		put: noop,
 		delete: noop,
 		settings: {
-			routes: process.cwd() + '/test/routes',
-			controllers: process.cwd() + '/test/controllers'
+			routes: path.resolve(process.cwd(), 'test/routes'),
+			controllers: path.resolve(process.cwd(), 'test/controllers')
 		}
 	};
 
 	it('should find correct number of routed controllers', function(done) {
-		var router_inst = router();
-		router_inst.middleware(app)(null, null, function() {
-			assert.equal(2, router_inst.routes.length);
+		var routerInst = router();
+
+		routerInst.middleware(app)(null, null, function() {
+			assert.equal(2, routerInst.routes.length);
 			done();
 		});
 	});
@@ -49,8 +34,8 @@ describe('controller.render', function() {
 			put: noop,
 			delete: noop,
 			settings: {
-				routes: process.cwd() + '/test/routes',
-				controllers: process.cwd() + '/test/controllers'
+				routes: path.resolve(process.cwd(), 'test/routes'),
+				controllers: path.resolve(process.cwd(), 'test/controllers')
 			}
 		},
 		app_routes,
@@ -87,7 +72,7 @@ describe('controller.render', function() {
 			request('/test', function(view, data, callback) {
 				assert.equal('test/index', view);
 				assert.ok(data);
-				assert.equal('test', data.page_name);
+				assert.equal('test', data.pageName);
 				assert.equal(undefined, data.messages);
 				done();
 			});
